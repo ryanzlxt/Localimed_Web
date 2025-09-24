@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Localimed.Views.LogPage"
+             Title="">
+
+    <Grid>
+
+        <Image Source="localimed.png" Aspect="AspectFill" HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+
+        <AbsoluteLayout>
+
+        <!-- Retângulo (BoxView) -->
+        <BoxView Color="LightGray"
+             WidthRequest="330"
+             HeightRequest="520"
+             AbsoluteLayout.LayoutBounds="0.8, 0.4, 400, 302"
+             AbsoluteLayout.LayoutFlags="PositionProportional" CornerRadius="30"/>
+
+        <!-- Conteúdo dentro do retângulo -->
+        <StackLayout AbsoluteLayout.LayoutBounds="0.78, 0.24, 320, 200"
+                 AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Label Text="Identifique-se no LocaliMED"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontSize="20" />
+            <Image Source="logo.png"
+               WidthRequest="100"
+               HeightRequest="100"
+               HorizontalOptions="Center" />
+        </StackLayout>
+
+        </AbsoluteLayout>
+
+
+
+
+    </Grid>
+</ContentPage>
