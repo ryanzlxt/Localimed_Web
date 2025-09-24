@@ -2,35 +2,50 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Localimed.Views.LogPage"
-             Title="">
+             Title=""
+             BackgroundColor="MidnightBlue">
 
-    <Grid>
+    <Grid ColumnDefinitions="*,2*">
+        <!--cria a divisao da tela-->
 
-        <Image Source="localimed.png" Aspect="AspectFill" HorizontalOptions="Center"
-               VerticalOptions="Center"/>
+        <!--lado esquerdo fica com a logo-->
 
+        <StackLayout Grid.Column="0"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Spacing="20">
 
-        <AbsoluteLayout>
+            <Image Source="logopng.png" WidthRequest="150"  HeightRequest="150"/>
+            <Label Text="LOCALIMED"
+               FontSize="40"
+               HorizontalOptions="Center"
+               TextColor="White"/>
 
-        <!-- Retângulo (BoxView) -->
-        <BoxView Color="LightGray"
+        </StackLayout>
+
+            <!--lado direito com o loguin-->
+        
+        <AbsoluteLayout Grid.Column="1">
+
+            <!-- cria uma caixa (BoxView) -->
+            <BoxView Color="LightGray"
              WidthRequest="330"
              HeightRequest="520"
              AbsoluteLayout.LayoutBounds="0.8, 0.4, 400, 302"
              AbsoluteLayout.LayoutFlags="PositionProportional" CornerRadius="30"/>
 
-        <!-- Conteúdo dentro do retângulo -->
-        <StackLayout AbsoluteLayout.LayoutBounds="0.78, 0.24, 320, 200"
+            <!-- Conteúdo dentro do retângulo -->
+            <StackLayout AbsoluteLayout.LayoutBounds="0.78, 0.24, 320, 200"
                  AbsoluteLayout.LayoutFlags="PositionProportional">
-            <Label Text="Identifique-se no LocaliMED"
+                <Label Text="Identifique-se no LocaliMED"
                HorizontalOptions="Center"
                VerticalOptions="Center"
                FontSize="20" />
-            <Image Source="logo.png"
+                <Image Source="logo.png"
                WidthRequest="100"
                HeightRequest="100"
                HorizontalOptions="Center" />
-        </StackLayout>
+            </StackLayout>
 
         </AbsoluteLayout>
 
