@@ -19,7 +19,7 @@
             <Label Text="LOCALIMED"
                FontSize="40"
                HorizontalOptions="Center"
-               TextColor="White"/>
+               TextColor="DarkBlue"/>
 
         </StackLayout>
 
