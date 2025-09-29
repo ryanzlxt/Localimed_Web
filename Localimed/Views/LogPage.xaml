@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?Cxml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Localimed.Views.LogPage"
              Title=""
-             BackgroundColor="MidnightBlue">
+             BackgroundColor="Navy">
 
     <Grid ColumnDefinitions="*,2*">
         <!--cria a divisao da tela-->
@@ -17,14 +17,15 @@
 
             <Image Source="logopng.png" WidthRequest="150"  HeightRequest="150"/>
             <Label Text="LOCALIMED"
+               FontFamily="Montserrat"
                FontSize="40"
                HorizontalOptions="Center"
                TextColor="White"/>
 
         </StackLayout>
 
-            <!--lado direito com o loguin-->
-        
+        <!--lado direito com o loguin-->
+
         <AbsoluteLayout Grid.Column="1">
 
             <!-- cria uma caixa (BoxView) -->
@@ -53,4 +54,5 @@
 
 
     </Grid>
+
 </ContentPage>
