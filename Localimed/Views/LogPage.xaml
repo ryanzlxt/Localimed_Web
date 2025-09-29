@@ -15,15 +15,14 @@
                      VerticalOptions="Center"
                      Spacing="20">
 
-            <Image Source="logopng.png" WidthRequest="650"  HeightRequest="320" Margin="320,0,0,0"/>
+            <Image Source="logopng.png" WidthRequest="650"  HeightRequest="320" Margin="0,0,0,0"/>
 
             <Label Text="LOCALIMED"
-               FontSize="50"
                FontSize="50"
                FontFamily="Montserrat"
                HorizontalOptions="Center"
                TextColor="White"
-                   Margin="311,0,0,0"/>
+                   Margin="0,0,0,0"/>
 
         </StackLayout>
 
@@ -60,29 +59,23 @@
                         TextColor="White"
                         BackgroundColor="DarkBlue"
                         CornerRadius="20"
-                        Margin="180,13,0,0"/>
+                        Margin="0,13,0,0"
+                        Clicked="OnContinuarClicked"/>
+                        <!-- Clicked nos permite Navegar para a primeira tela que nos redireciona
+                            para opções de inserir ou excluir medicamento-->
+                        
 
                 <Label Text="Outras opções de identificação :"
                        FontSize="17"
                        TextColor="Black" Margin="0,30,20,0"/>
-                
+
 
                 <Button Text="Entrar com CNS"
                         TextColor="Black"
                         BackgroundColor="Gray"
                         CornerRadius="20"/>
-                
-                
-                <Button Text="Login com QR Code"
-                        TextColor="Black"
-                        BackgroundColor="Gray"
-                        ImageSource="qrcode.png"
-                        FontSize="15"
-                        WidthRequest="278" 
-                        HeightRequest="0"
-                        CornerRadius="20"/>
-                
-                
+
+
                 <Button Text="Seu certificado digital"
                         TextColor="Black"
                         BackgroundColor="Gray"
@@ -91,21 +84,6 @@
                         WidthRequest="280" 
                         HeightRequest="30"
                         FontSize="17"/>
-                
-                
-                <Button Text="Seu certificado digital em nuvem"
-                        TextColor="Black"
-                        FontSize="13"
-                        BackgroundColor="Gray"
-                        WidthRequest="280" 
-                        HeightRequest="0"
-                        ImageSource="nuvem.png"
-                        CornerRadius="20"/>
-
-
-
-
-
 
                 <Image Source="logo.png"
                WidthRequest="100"
