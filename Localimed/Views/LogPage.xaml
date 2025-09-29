@@ -19,6 +19,7 @@
 
             <Label Text="LOCALIMED"
                FontSize="50"
+               FontSize="50"
                FontFamily="Montserrat"
                HorizontalOptions="Center"
                TextColor="White"
@@ -64,14 +65,14 @@
                 <Label Text="Outras opções de identificação :"
                        FontSize="17"
                        TextColor="Black" Margin="0,30,20,0"/>
-
+                
 
                 <Button Text="Entrar com CNS"
                         TextColor="Black"
                         BackgroundColor="Gray"
                         CornerRadius="20"/>
-
-
+                
+                
                 <Button Text="Login com QR Code"
                         TextColor="Black"
                         BackgroundColor="Gray"
@@ -80,8 +81,8 @@
                         WidthRequest="278" 
                         HeightRequest="0"
                         CornerRadius="20"/>
-
-
+                
+                
                 <Button Text="Seu certificado digital"
                         TextColor="Black"
                         BackgroundColor="Gray"
@@ -90,8 +91,8 @@
                         WidthRequest="280" 
                         HeightRequest="30"
                         FontSize="17"/>
-
-
+                
+                
                 <Button Text="Seu certificado digital em nuvem"
                         TextColor="Black"
                         FontSize="13"
