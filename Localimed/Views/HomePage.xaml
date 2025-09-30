@@ -19,12 +19,13 @@
                 WidthRequest="1100"
                 />
 
-            <!-- Criando o botão para que redireciona para a página de inserção de medicamentos-->
+            <!-- Criando o botão para que redireciona para a página de inserção de medicamentos
+            Clicked=OnInserirMedicamentosClicked vai ser a nossa conexão de telas que está configurada no xaml.cs da HomePage-->
             <Button Text="Inserir Medicamentos"
                     TextColor="Black" 
                     FontAttributes="Bold" 
                     FontSize="32" 
-                    Clicked="IrParaInsercaoDeMedicamentos" 
+                    Clicked="OnInserirMedicamentosClicked" 
                     BackgroundColor="White" 
                     HeightRequest="50" 
                     WidthRequest="450" 
@@ -35,7 +36,7 @@
                     TextColor="Black"
                     FontAttributes="Bold"
                     FontSize="32"
-                    Clicked="IrParaRemocaoDeMedicamentos"
+                    Clicked="OnRemoverMedicamentosClicked"
                     BackgroundColor="White"
                     HeightRequest="50"
                     WidthRequest="450"
@@ -46,7 +47,7 @@
                     TextColor="Black"
                     FontAttributes="Bold"
                     FontSize="32"
-                    Clicked="IrParaListagemDeMedicamentos"
+                    Clicked="OnVisualizarEstoqueClicked"
                     BackgroundColor="White"
                     HeightRequest="50"
                     WidthRequest="450"
