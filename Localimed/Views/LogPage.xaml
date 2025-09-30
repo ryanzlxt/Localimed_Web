@@ -19,7 +19,6 @@
 
             <Label Text="LOCALIMED"
                FontSize="50"
-               FontSize="50"
                FontFamily="Montserrat"
                HorizontalOptions="Center"
                TextColor="White"
@@ -34,16 +33,14 @@
             <!-- cria uma caixa (BoxView) -->
             <BoxView Color="LightGray"
              WidthRequest="330"
-             HeightRequest="520"
-             AbsoluteLayout.LayoutBounds="0.74, 0.50, 400, 302"
+             HeightRequest="450"
+             AbsoluteLayout.LayoutBounds="0.74, 0.50, 404, 302" 
              AbsoluteLayout.LayoutFlags="PositionProportional" CornerRadius="30"/>
 
             <!-- Conteúdo dentro do retângulo -->
-            <StackLayout AbsoluteLayout.LayoutBounds="0.72, 0.5, 320, 530"
-                 AbsoluteLayout.LayoutFlags="PositionProportional"
+            <StackLayout AbsoluteLayout.LayoutBounds="0.72, 0.52, 330, 450"
                   Padding="20"
                   Spacing="15">
-
 
                 <Label Text="Identifique-se no LocaliMED"
                HorizontalOptions="Center"
@@ -65,60 +62,28 @@
                 <Label Text="Outras opções de identificação :"
                        FontSize="17"
                        TextColor="Black" Margin="0,30,20,0"/>
-                
 
                 <Button Text="Entrar com CNS"
                         TextColor="Black"
                         BackgroundColor="Gray"
                         CornerRadius="20"/>
-                
-                
-                <Button Text="Login com QR Code"
-                        TextColor="Black"
-                        BackgroundColor="Gray"
-                        ImageSource="qrcode.png"
-                        FontSize="15"
-                        WidthRequest="278" 
-                        HeightRequest="0"
-                        CornerRadius="20"/>
-                
-                
+
                 <Button Text="Seu certificado digital"
                         TextColor="Black"
                         BackgroundColor="Gray"
                         CornerRadius="20"
-                        ImageSource="certificado.png"
                         WidthRequest="280" 
                         HeightRequest="30"
                         FontSize="17"/>
-                
-                
-                <Button Text="Seu certificado digital em nuvem"
-                        TextColor="Black"
-                        FontSize="13"
-                        BackgroundColor="Gray"
-                        WidthRequest="280" 
-                        HeightRequest="0"
-                        ImageSource="nuvem.png"
-                        CornerRadius="20"/>
-
-
-
-
-
 
                 <Image Source="logo.png"
                WidthRequest="100"
                HeightRequest="100"
                HorizontalOptions="Center" />
 
-
             </StackLayout>
 
         </AbsoluteLayout>
-
-
-
 
     </Grid>
 </ContentPage>
