@@ -5,11 +5,9 @@
         public App()
         {
             InitializeComponent();
+            MainPage = new AppShell(); //Dizendo ao código que a MainPage são os parâmetros que foram passados em AppShell.xaml
         }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-        }
+        
     }
 }

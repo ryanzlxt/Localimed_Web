@@ -7,8 +7,14 @@
     Title="Localimed">
 
     <ShellContent
-        Title="Home"
+        Title="Login"
         ContentTemplate="{DataTemplate views:LogPage}"
-        Route="LogPage" />
+        Route="LogPage" /> <!-- Página de login-->
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:HomePage}"
+        Route="HomePage" />
+    <!-- Página inicial do aplicativo -->
 
 </Shell>

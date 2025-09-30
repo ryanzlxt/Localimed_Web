@@ -2,11 +2,61 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Localimed.Views.HomePage"
-             Title="HomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="HomePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#001240">
+    <!-- Passando a minha backgroundcolor -->
+    <!-- Escondendo a barra de navegação com ShellNavBarIsVisible-->
+
+    <VerticalStackLayout VerticalOptions="Center" 
+                         Padding="20">
+        <Grid HeightRequest="800" WidthRequest="1200" >
+
+            <RoundRectangle 
+                Fill="#acacac"
+                CornerRadius="20"
+                HeightRequest="650"
+                WidthRequest="1100"
+                />
+
+            <!-- Criando o botão para que redireciona para a página de inserção de medicamentos
+            Clicked=OnInserirMedicamentosClicked vai ser a nossa conexão de telas que está configurada no xaml.cs da HomePage-->
+            <Button Text="Inserir Medicamentos"
+                    TextColor="Black" 
+                    FontAttributes="Bold" 
+                    FontSize="32" 
+                    Clicked="OnInserirMedicamentosClicked" 
+                    BackgroundColor="White" 
+                    HeightRequest="50" 
+                    WidthRequest="450" 
+                    Margin="0, -450,0, 0"
+                    CornerRadius="15"/>
+
+            <Button Text="Remover Medicamentos"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="32"
+                    Clicked="OnRemoverMedicamentosClicked"
+                    BackgroundColor="White"
+                    HeightRequest="50"
+                    WidthRequest="450"
+                    CornerRadius="15"/>
+            <!-- Criando o botão para que redireciona para a página de remoção de medicamentos-->
+
+            <Button Text="Visualizar Estoque"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="32"
+                    Clicked="OnVisualizarEstoqueClicked"
+                    BackgroundColor="White"
+                    HeightRequest="50"
+                    WidthRequest="450"
+                    Margin="0, 450,0, 0"
+                    CornerRadius="15"/>
+
+            <Image Source="logopng.png" HeightRequest="180" WidthRequest="150" Margin="670, 0, -450, 630" ></Image>
+
+        </Grid>
+
     </VerticalStackLayout>
 </ContentPage>

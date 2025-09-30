@@ -2,6 +2,7 @@
   "profiles": {
     "Windows Machine": {
       "commandName": "Project",
+      "workingDirectory": "C:\\Users\\benja\\OneDrive\\Área de Trabalho\\LocaliMed_WEB",
       "nativeDebugging": false
     }
   }
