@@ -33,14 +33,16 @@
             <!-- cria uma caixa (BoxView) -->
             <BoxView Color="LightGray"
              WidthRequest="330"
-             HeightRequest="450"
-             AbsoluteLayout.LayoutBounds="0.74, 0.50, 404, 302" 
+             HeightRequest="520"
+             AbsoluteLayout.LayoutBounds="0.74, 0.50, 400, 302"
              AbsoluteLayout.LayoutFlags="PositionProportional" CornerRadius="30"/>
 
             <!-- Conteúdo dentro do retângulo -->
-            <StackLayout AbsoluteLayout.LayoutBounds="0.72, 0.52, 330, 450"
+            <StackLayout AbsoluteLayout.LayoutBounds="0.72, 0.5, 320, 530"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
                   Padding="20"
                   Spacing="15">
+
 
                 <Label Text="Identifique-se no LocaliMED"
                HorizontalOptions="Center"
@@ -59,9 +61,9 @@
                         CornerRadius="20"
                         Margin="0,13,0,0"
                         Clicked="OnContinuarClicked"/>
-                        <!-- Clicked nos permite Navegar para a primeira tela que nos redireciona
+                <!-- Clicked nos permite Navegar para a primeira tela que nos redireciona
                             para opções de inserir ou excluir medicamento-->
-                        
+
 
                 <Label Text="Outras opções de identificação :"
                        FontSize="17"
@@ -78,6 +80,7 @@
                         TextColor="Black"
                         BackgroundColor="Gray"
                         CornerRadius="20"
+                        ImageSource="certificado.png"
                         WidthRequest="280" 
                         HeightRequest="30"
                         FontSize="17"/>
@@ -87,9 +90,13 @@
                HeightRequest="100"
                HorizontalOptions="Center" />
 
+
             </StackLayout>
 
         </AbsoluteLayout>
+
+
+
 
     </Grid>
 </ContentPage>
