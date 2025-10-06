@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Localimed.Views.LogPage"
              Title=""
-             BackgroundColor="MidnightBlue">
+             BackgroundColor="#001240">
 
     <Grid ColumnDefinitions="*,2*">
         <!--cria a divisao da tela-->

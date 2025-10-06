@@ -17,4 +17,23 @@
         Route="HomePage" />
     <!-- Página inicial do aplicativo -->
 
+
+    <!-- Conexão com a tela de inserir medicamentos-->
+    <ShellContent
+    Title="Inserir Medicamentos"
+    ContentTemplate="{DataTemplate views:InserirMedicamentos}"
+    Route="InserirMedicamentos" />
+
+    <!-- Conexão com a tela de remover medicamentos-->
+    <ShellContent 
+    Title="Remover Medicamentos"
+    ContentTemplate="{DataTemplate views:RemoverMedicamentos}"
+    Route="RemoverMedicamentos"/>
+
+    <!-- Conexão com a tela de visualizar estoque-->
+    <ShellContent 
+    Title="Visualizar Estoque"
+    ContentTemplate="{DataTemplate views:VisualizarEstoque}"
+    Route="VisualizarEstoque"/>
+
 </Shell>
