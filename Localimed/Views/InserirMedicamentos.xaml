@@ -4,29 +4,52 @@
              x:Class="Localimed.Views.InserirMedicamentos"
              Title="InserirMedicamentos"
              Shell.NavBarIsVisible="False">
+
     <VerticalStackLayout VerticalOptions="Center">
 
-        <Grid HeightRequest="500" WidthRequest="4000">
-            <Label Text="LOCALIMED" TextColor="White"/>
-            <BoxView
-                Color="#001240"
-                Margin="0,-700,0,0"
-                CornerRadius="30"
-                HeightRequest="180"
-                WidthRequest="1950"
-                />
-        </Grid>
         
+        <Border 
+            Padding="60"
+            Margin="0,-100,0,0"
+            BackgroundColor="#001240"
+            HorizontalOptions="Fill">
+
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="23" />
+            </Border.StrokeShape>
+
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                
+                <Image Source="logopng.png"
+                       WidthRequest="30"
+                       HeightRequest="30"
+                       VerticalOptions="Center" />
+
+                
+                <Label Text="LOCALIMED"
+                       FontSize="30"
+                       TextColor="White"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold" />
+            </HorizontalStackLayout>
+
+        </Border>
+
+        
+        <Grid HeightRequest="500" WidthRequest="4000">
+            
+        </Grid>
+
+       
         <Grid HeightRequest="300" WidthRequest="400">
             <RoundRectangle 
-            Fill="#acacac"
-            CornerRadius="20"
-            HeightRequest="650"
-            WidthRequest="1100"
-            Margin="0,-500,0,0"
-            />
-
+                Fill="#acacac"
+                CornerRadius="20"
+                HeightRequest="650"
+                WidthRequest="1100"
+                Margin="0,-500,0,0" />
         </Grid>
+
     </VerticalStackLayout>
 
 </ContentPage>
