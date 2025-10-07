@@ -3,11 +3,11 @@ using Microsoft.Maui.Controls;
 
 namespace Localimed.Views;
 
-public partial class MainPage : ContentPage
+public partial class VisualizarEstoque : ContentPage
 {
     public ObservableCollection<Medicine> Medicines { get; set; }
 
-    public MainPage()
+    public VisualizarEstoque()
     {
         InitializeComponent();
 
