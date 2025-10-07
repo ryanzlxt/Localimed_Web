@@ -42,12 +42,42 @@
 
        
         <Grid HeightRequest="300" WidthRequest="400">
+            
             <RoundRectangle 
                 Fill="#acacac"
-                CornerRadius="20"
                 HeightRequest="650"
                 WidthRequest="1100"
                 Margin="0,-500,0,0" />
+            <VerticalStackLayout>
+                <Frame CornerRadius="5"
+                       Padding="10"
+                       HasShadow="False"
+                       HeightRequest="60">
+                            <Entry 
+                            Placeholder="Nome do Medicamento"
+                            BackgroundColor="White"
+                            PlaceholderColor="Gray" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <Border
+                Background="LightGray"
+                Stroke="Black"
+                Margin="1,-490,0,720">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="23" />
+                </Border.StrokeShape>
+                <Label Text="Inserir Medicamentos"
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Padding="20"
+                   Margin="0,-2,0,0"/> 
+            </Border>
         </Grid>
 
     </VerticalStackLayout>
