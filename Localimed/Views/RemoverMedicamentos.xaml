@@ -2,11 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Localimed.Views.RemoverMedicamentos"
-             Title="RemoverMedicamentos">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="RemoverMedicamentos"
+             Shell.NavBarIsVisible="False">
+    <VerticalStackLayout VerticalOptions="Center">
+
+
+        <Border 
+        Padding="60"
+        Margin="0,-100,0,0"
+        BackgroundColor="#001240"
+        HorizontalOptions="Fill">
+
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="23" />
+            </Border.StrokeShape>
+
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+
+                <Image Source="logopng.png"
+                   WidthRequest="30"
+                   HeightRequest="30"
+                   VerticalOptions="Center" />
+
+
+                <Label Text="LOCALIMED"
+                   FontSize="30"
+                   TextColor="White"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold" />
+            </HorizontalStackLayout>
+
+        </Border>
+
+
+        <Grid HeightRequest="500" WidthRequest="4000">
+
+        </Grid>
+
+
+        <Grid HeightRequest="300" WidthRequest="400">
+            <RoundRectangle 
+            Fill="#acacac"
+            CornerRadius="20"
+            HeightRequest="650"
+            WidthRequest="1100"
+            Margin="0,-500,0,0" />
+        </Grid>
+
     </VerticalStackLayout>
+
 </ContentPage>
