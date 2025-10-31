@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Localimed.Views.LogPage"
              Title=""
-             BackgroundColor="#001240">
+             BackgroundColor="#001240"
+             Shell.NavBarIsVisible="False">
 
     <Grid ColumnDefinitions="*,2*">
         <!--cria a divisao da tela-->
@@ -49,23 +50,40 @@
                FontSize="21"
                TextColor="Black"/>
 
-                <Entry Placeholder="ID funcinario:"
+                <!--<Entry Placeholder="ID funcinario:"
                        TextColor="Black"
                        BackgroundColor="White"
-                       Margin="0,20,0,0"/>
+                       Margin="0,20,0,0"/>-->
+
+                <Entry x:Name="identificacaoUsuario"
+                       Placeholder="Insira o seu ID"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Text="{Binding IdentificacaoUsuario}"
+                    />
 
                 <Button Text="Continuar"
-                        Padding="10"
-                        TextColor="White"
-                        BackgroundColor="DarkBlue"
-                        CornerRadius="20"
-                        Margin="0,13,0,0"
-                        Clicked="OnContinuarClicked"/>
+                        Command="{Binding BotaoContinuar}"
+                        IsEnabled="{Binding BotaoAtivo}"
+                    />
+
+
+                <!--<Button
+                    Text="Continuar"
+                    Clicked="ContinuarClicked"
+                    Padding="10"
+                    TextColor="White"
+                    BackgroundColor="DarkBlue"
+                    CornerRadius="20"
+                    Margin="0,13,0,0"/>-->     
+
+
+
                 <!-- Clicked nos permite Navegar para a primeira tela que nos redireciona
                             para opções de inserir ou excluir medicamento-->
 
 
-                <Label Text="Outras opções de identificação :"
+                <!--<Label Text="Outras opções de identificação :"
                        FontSize="17"
                        TextColor="Black" Margin="0,30,20,0"/>
 
@@ -73,17 +91,18 @@
                 <Button Text="Entrar com CNS"
                         TextColor="Black"
                         BackgroundColor="Gray"
-                        CornerRadius="20"/>
+                        CornerRadius="20"/>-->
 
 
-                <Button Text="Seu certificado digital"
+                <!--<Button Text="Seu certificado digital"
                         TextColor="Black"
                         BackgroundColor="Gray"
                         CornerRadius="20"
                         ImageSource="certificado.png"
                         WidthRequest="280" 
                         HeightRequest="30"
-                        FontSize="17"/>
+                        FontSize="17"
+                        Clicked="CertificadoClicked"/>-->
 
                 <Image Source="logo.png"
                WidthRequest="100"

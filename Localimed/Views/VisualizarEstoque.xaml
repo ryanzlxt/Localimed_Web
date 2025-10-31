@@ -3,8 +3,8 @@
              x:Class="Localimed.Views.VisualizarEstoque"  
              Title="Estoque de Medicamentos">
     <!-- Main container for the page content with vertical stack layout and padding -->
-    <VerticalStackLayout Padding="10" BackgroundColor="White">
-        <!-- Title label for the page, centered and bold with larger font size -->
+    <!--<VerticalStackLayout Padding="10" BackgroundColor="White">
+        --><!-- Title label for the page, centered and bold with larger font size --><!--
         <Label Text="Estoque de Medicamentos"
                FontAttributes="Bold"
                FontSize="24"
@@ -14,17 +14,17 @@
 
 
 
-        <!-- CollectionView to display the list of medicines bound to the Medicines collection in the ViewModel -->
+        --><!-- CollectionView to display the list of medicines bound to the Medicines collection in the ViewModel --><!--
         <CollectionView x:Name="MedicinesList" ItemsSource="{Binding Medicines}">
 
 
 
-            <!-- Header for the CollectionView, displaying column titles -->
+            --><!-- Header for the CollectionView, displaying column titles --><!--
             <CollectionView.Header>
                 <Grid ColumnDefinitions="*,Auto,Auto"
                       BackgroundColor="#444"
                       Padding="4">
-                    <!-- Column headers for Medicine name, Quantity, and Requires Term -->
+                    --><!-- Column headers for Medicine name, Quantity, and Requires Term --><!--
                     <Label Text="Medicamento" Grid.Column="0"
                            TextColor="White" FontAttributes="Bold"/>
                     <Label Text="Quantidade" Grid.Column="1"
@@ -36,17 +36,17 @@
 
 
 
-            <!-- Template for each item representing a medicine in the list -->
+            --><!-- Template for each item representing a medicine in the list --><!--
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid ColumnDefinitions="*,Auto,Auto"
                           Padding="4"
                           BackgroundColor="Gray">
-                        <!-- Medicine name bound to Name property -->
+                        --><!-- Medicine name bound to Name property --><!--
                         <Label Text="{Binding Name}" Grid.Column="0"/>
-                        <!-- Quantity bound to Quantity property -->
+                        --><!-- Quantity bound to Quantity property --><!--
                         <Label Text="{Binding Quantity}" Grid.Column="1" Margin="10,0"/>
-                        <!-- Requires Term bound to RequiresTerm property -->
+                        --><!-- Requires Term bound to RequiresTerm property --><!--
                         <Label Text="{Binding RequiresTerm}" Grid.Column="2" Margin="10,0"/>
                     </Grid>
                 </DataTemplate>
@@ -55,12 +55,12 @@
 
 
 
-        <!-- Horizontal layout for buttons centered below the list -->
+        --><!-- Horizontal layout for buttons centered below the list --><!--
         <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20">
-            <!-- Remove button with gray background -->
+            --><!-- Remove button with gray background --><!--
             <Button Text="REMOVER" BackgroundColor="Gray" TextColor="White" Margin="0,0,10,0"/>
-            <!-- Add button with dark blue background -->
+            --><!-- Add button with dark blue background --><!--
             <Button Text="ADICIONAR" BackgroundColor="#041A3F" TextColor="White"/>
         </HorizontalStackLayout>
-    </VerticalStackLayout>
+    </VerticalStackLayout>-->
 </ContentPage> 

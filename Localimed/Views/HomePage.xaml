@@ -10,53 +10,90 @@
 
     <VerticalStackLayout VerticalOptions="Center" 
                          Padding="20">
-        <Grid HeightRequest="800" WidthRequest="1200" >
-
+        <Grid HeightRequest="800"
+              WidthRequest="1200" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
             <RoundRectangle 
+                HorizontalOptions="Center"
                 Fill="#acacac"
-                CornerRadius="20"
-                HeightRequest="650"
-                WidthRequest="1100"
+                CornerRadius="15"
+                HeightRequest="800"
+                WidthRequest="900"
                 />
 
+            <Button 
+                    BackgroundColor="GhostWhite"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    HeightRequest="60"
+                    WidthRequest="300"
+                    Margin="0 , -100, 0, 600"
+                    CornerRadius="25"/>
+
+            <Button 
+                    BackgroundColor="GhostWhite"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    HeightRequest="60"
+                    WidthRequest="300"
+                    Margin="0, 0, 0, 350"
+                    CornerRadius="25"/>
+
+
+            <Button 
+                    BackgroundColor="GhostWhite"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    HeightRequest="60"
+                    WidthRequest="300"
+                    Margin="0 , 90, 0 ,90 "
+                    CornerRadius="25"/>
+
             <!-- Criando o botão para que redireciona para a página de inserção de medicamentos
-            Clicked=OnInserirMedicamentosClicked vai ser a nossa conexão de telas que está configurada no xaml.cs da HomePage-->
-            <Button Text="Inserir Medicamentos"
-                    TextColor="Black" 
-                    FontAttributes="Bold" 
-                    FontSize="32" 
-                    Clicked="OnInserirMedicamentosClicked" 
-                    BackgroundColor="White" 
-                    HeightRequest="50" 
-                    WidthRequest="450" 
-                    Margin="0, -450,0, 0"
-                    CornerRadius="15"/>
+                        Clicked=OnInserirMedicamentosClicked vai ser a nossa conexão de telas que está configurada no xaml.cs da HomePage-->
+            <!--
+                        <Button Text="Inserir Medicamentos"
+                                TextColor="Black" 
+                                FontAttributes="Bold" 
+                                FontSize="32" 
+                                Clicked="Button_Clicked_1" 
+                                BackgroundColor="White" 
+                                HeightRequest="50" 
+                                WidthRequest="450" 
+                                Margin="0, -450,0, 0"
+                                CornerRadius="15"/>
 
-            <Button Text="Remover Medicamentos"
-                    TextColor="Black"
-                    FontAttributes="Bold"
-                    FontSize="32"
-                    Clicked="OnRemoverMedicamentosClicked"
-                    BackgroundColor="White"
-                    HeightRequest="50"
-                    WidthRequest="450"
-                    CornerRadius="15"/>
-            <!-- Criando o botão para que redireciona para a página de remoção de medicamentos-->
+                        <Button Text="Remover Medicamentos"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                FontSize="32"
+                                Clicked="Button_Clicked"
+                                BackgroundColor="White"
+                                HeightRequest="50"
+                                WidthRequest="450"
+                                CornerRadius="15"/>
+                        <!-Criando o botão para que redireciona para a página de remoção de medicamentos-->
+            <!--
 
-            <Button Text="Visualizar Estoque"
-                    TextColor="Black"
-                    FontAttributes="Bold"
-                    FontSize="32"
-                    Clicked="OnVisualizarEstoqueClicked"
-                    BackgroundColor="White"
-                    HeightRequest="50"
-                    WidthRequest="450"
-                    Margin="0, 450,0, 0"
-                    CornerRadius="15"/>
+                        <Button Text="Visualizar Estoque"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                FontSize="32"
+                                Clicked="Button_Clicked_2" 
+                                BackgroundColor="White"
+                                HeightRequest="50"
+                                WidthRequest="450"
+                                Margin="0, 450,0, 0"
+                                CornerRadius="15"/>
 
-            <Image Source="logopng.png" HeightRequest="180" WidthRequest="150" Margin="670, 0, -450, 630" ></Image>
+                        <Image Source="logopng.png" HeightRequest="180" WidthRequest="150" Margin="670, 0, -450, 630" ></Image>
 
+                    
+
+               -->
         </Grid>
-
     </VerticalStackLayout>
 </ContentPage>

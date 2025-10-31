@@ -1,3 +1,6 @@
+using System.Threading.Tasks;
+using Localimed.ViewModel;
+
 namespace Localimed.Views;
 
 public partial class LogPage : ContentPage
@@ -5,10 +8,10 @@ public partial class LogPage : ContentPage
 	public LogPage()
 	{
 		InitializeComponent();
+
+		//Realizando a conexão do BindingContext!!! Sem isso não roda nada!
+		BindingContext = new LogPageViewModel();
 	}
 
-    private async void OnContinuarClicked(object sender, EventArgs e) //Conexão das páginas assim que o botão Continuar for clicado, redirecionando o usuário para a HomePage.xamlW
-    {
-        await Shell.Current.GoToAsync("///HomePage");
-    }
+   
 }
