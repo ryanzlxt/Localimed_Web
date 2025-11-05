@@ -4,37 +4,103 @@
              x:Class="Localimed.Views.InserirMedicamentos"
              Title="InserirMedicamentos"
              Shell.NavBarIsVisible="False">
+    <VerticalStackLayout>
+        <Grid RowDefinitions="Auto, * " 
+                HeightRequest="200"
+                  Margin="10">
+            <Border 
+                 Padding="60"
+                 Margin="0,-10,0,0"
+                 BackgroundColor="#001240"
+                 HorizontalOptions="Fill"
+             >
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="12" />
+                    </Border.StrokeShape>
+
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+
+             
+                    <Label Text="LOCALIMED"
+                           VerticalTextAlignment="Center"
+                            FontSize="35"
+                            TextColor="White"
+                            VerticalOptions="Center"
+                            FontAttributes="Bold" />
+                </HorizontalStackLayout>
+
+            </Border>
+            
+            
+        </Grid>
+        <VerticalStackLayout>
+            <!-- Aqui em Grid.RowDefinitions, a quantidade de palavras
+            Auto, significa as linhas em que cada Entrada pode estar inserida.
+            Nisso obtemos 5 possibilidades de entradas diferentes para 5 linhas-->
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, *"
+                  ColumnDefinitions="*, *"
+                HeightRequest="700"
+                  BackgroundColor="Blue"
+                  WidthRequest="1200">
+
+             
+                    <Entry x:Name="nomeMedicamento"
+                           Placeholder="Nome do Medicamento"
+                           Text="{Binding NomeMedicamento}"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           BackgroundColor="White"
+                           Margin="20,30,-600, 20"
+                           TextColor="Red"
+                           WidthRequest="400"
+                           HeightRequest="12"/>
+        
+               
+                <Entry x:Name="quantidadeMedicamento"
+                       Placeholder="Quantidade Medicamento"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        BackgroundColor="Yellow"
+                        TextColor="Purple"
+                        WidthRequest="400"
+                        HeightRequest="12"
+                        />  
+                <Entry x:Name="numeroMedicamento"
+                       Placeholder="Número do Lote"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Margin="0,0,-1100,0"
+                        BackgroundColor="White"
+                        TextColor="Green"
+                        WidthRequest="400"
+                        HeightRequest="12"
+                        />
+                <Picker x:Name="tipoMedicamentoPicker"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       BackgroundColor="Red"
+                       Margin="30"
+                       WidthRequest="400"
+                       />
+                <Picker x:Name="dataPostagemMedicamento"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        BackgroundColor="Orange"
+                        Margin="-120,30,-20,30"
+                        WidthRequest="400"/>
+            </Grid>
+           
+        </VerticalStackLayout>
+
+
+
+
+
+
+    </VerticalStackLayout>
 
     <!--<VerticalStackLayout VerticalOptions="Center">
-
-        
-        <Border 
-            Padding="60"
-            Margin="0,-100,0,0"
-            BackgroundColor="#001240"
-            HorizontalOptions="Fill">
-
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="23" />
-            </Border.StrokeShape>
-
-            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
-                
-                <Image Source="logopng.png"
-                       WidthRequest="30"
-                       HeightRequest="30"
-                       VerticalOptions="Center" />
-
-                
-                <Label Text="LOCALIMED"
-                       FontSize="30"
-                       TextColor="White"
-                       VerticalOptions="Center"
-                       FontAttributes="Bold" />
-            </HorizontalStackLayout>
-
-        </Border>
-
         
         <Grid HeightRequest="500" WidthRequest="4000">
             

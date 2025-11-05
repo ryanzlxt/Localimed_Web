@@ -16,7 +16,10 @@
                      VerticalOptions="Center"
                      Spacing="20">
 
-            <Image Source="logopng.png" WidthRequest="650"  HeightRequest="320" Margin="0,0,0,0"/>
+            <Image Source="logopng.png"
+                   WidthRequest="650" 
+                   HeightRequest="320" 
+                   Margin="0,0,0,0"/>
 
             <Label Text="LOCALIMED"
                FontSize="50"
@@ -33,7 +36,7 @@
 
             <!-- cria uma caixa (BoxView) -->
             <BoxView Color="LightGray"
-             WidthRequest="330"
+             WidthRequest="360"
              HeightRequest="520"
              AbsoluteLayout.LayoutBounds="0.74, 0.50, 400, 302"
              AbsoluteLayout.LayoutFlags="PositionProportional" CornerRadius="30"/>
@@ -47,7 +50,9 @@
 
                 <Label Text="Identifique-se no LocaliMED"
                HorizontalOptions="Center"
-               FontSize="21"
+               Margin="0,22"        
+               FontSize="20"
+               FontAttributes="Bold"
                TextColor="Black"/>
 
                 <!--<Entry Placeholder="ID funcinario:"
