@@ -38,7 +38,7 @@
             <!-- Aqui em Grid.RowDefinitions, a quantidade de palavras
             Auto, significa as linhas em que cada Entrada pode estar inserida.
             Nisso obtemos 5 possibilidades de entradas diferentes para 5 linhas-->
-            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, *"
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, *"
                   ColumnDefinitions="*, *"
                 HeightRequest="700"
                   BackgroundColor="Blue"
@@ -89,6 +89,20 @@
                         BackgroundColor="Orange"
                         Margin="-120,30,-20,30"
                         WidthRequest="400"/>
+
+                <Button Text="Confirmar"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="320, 620, 0, -580"
+                    BackgroundColor="Coral"
+                    />
+
+                <Button Text="Voltar"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="3, 620, 290, -580"
+                        Command="{Binding BotaoVoltar}"
+                        />
             </Grid>
            
         </VerticalStackLayout>
