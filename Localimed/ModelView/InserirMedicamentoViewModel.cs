@@ -15,12 +15,25 @@ namespace Localimed.ModelView
     public class InserirMedicamentoViewModel : INotifyPropertyChanged
     {
 
-
+        private string _numeroLote;
         private string _nomeMedicamento;
-        private int _quantidadeMedicamento;
+        private string _quantidadeMedicamento;
         private string _tipoMedicamento;
         private DateTime _dataMedicamento;
 
+
+        public DateTime DataMedicamento
+        {
+            get => _dataMedicamento;
+            set
+            {
+                if (_dataMedicamento != value)
+                {
+                    _dataMedicamento = value;
+                    OnPropertyChanged(nameof(DataMedicamento));
+                }
+            }
+        }
 
         public string NomeMedicamento
         {
@@ -35,7 +48,20 @@ namespace Localimed.ModelView
             }
         }
 
-        public int QuantidadeMedicamento
+        public string NumeroLote
+        {
+            get => _numeroLote;
+            set
+            {
+                if (_numeroLote != value)
+                {
+                    _numeroLote = value;
+                    OnPropertyChanged(nameof(NumeroLote));
+                }
+            }
+        }
+
+        public string QuantidadeMedicamento
         {
             get => _quantidadeMedicamento;
             set
@@ -45,14 +71,19 @@ namespace Localimed.ModelView
                     _quantidadeMedicamento = value;
                     OnPropertyChanged(nameof(QuantidadeMedicamento));
                 }
-
             }
         }
-
         public string TipoMedicamento
         {
-
             get => _tipoMedicamento;
+            set
+            {
+                if (_tipoMedicamento != value)
+                {
+                    _tipoMedicamento = value;
+                    OnPropertyChanged(nameof(TipoMedicamento));
+                }
+            }
         }
 
         public ICommand BotaoConfirmar { get; }
@@ -60,7 +91,7 @@ namespace Localimed.ModelView
 
         public InserirMedicamentoViewModel()
         {
-
+            DataMedicamento = DateTime.Today;
             BotaoConfirmar = new Command(async () => OnConfirmarClicked());
             BotaoVoltar = new Command(OnBotaoVoltarClicked);
 
@@ -79,11 +110,32 @@ namespace Localimed.ModelView
         {
 
 
-            if (_quantidadeMedicamento <= 0)
+            if (!int.TryParse(QuantidadeMedicamento, out int quantidade))
             {
-                Application.Current.MainPage.DisplayAlert("Erro",
-                   "A quantidade de medicamentos não pode ser menor ou 0!",
-                   "Ok");
+                await Application.Current.MainPage.DisplayAlert(
+                    "Erro",
+                    "Digite apenas números na quantidade.",
+                    "OK");
+
+                return;
+            }
+
+            if (quantidade <= 0)
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Erro",
+                    "A quantidade de medicamentos não pode ser menor ou igual a 0.",
+                    "OK");
+
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(TipoMedicamento))
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Erro",
+                    "Selecione um tipo de medicamento.",
+                    "OK");
 
                 return;
             }
@@ -93,14 +145,49 @@ namespace Localimed.ModelView
                 await Application.Current.MainPage.DisplayAlert(
                    "Erro",
                    "O Nome do Medicamento está vazio!",
-                   "Ok"
-                   );
+                   "Ok");
+
                 return;
             }
+
+            if (!int.TryParse(NumeroLote, out _))
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Erro",
+                    "O número do lote deve conter apenas números.",
+                    "OK");
+
+                return;
+            }
+
+            if (DataMedicamento == default)
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Erro",
+                    "Selecione uma data.",
+                    "OK");
+
+                return;
+            }
+
+            await Application.Current.MainPage.DisplayAlert(
+                 "Cadastro Realizado",
+                 $"Medicamento '{NomeMedicamento}' cadastrado com sucesso.\n\n" +
+                 $"Quantidade: {QuantidadeMedicamento}\n" +
+                 $"Lote: {NumeroLote}\n" +
+                 $"Tipo: {TipoMedicamento}",
+                 "OK");
+                NomeMedicamento = string.Empty;
+                QuantidadeMedicamento = string.Empty;
+                NumeroLote = string.Empty;
+                TipoMedicamento = string.Empty;
+                DataMedicamento = DateTime.Today;
         }
+
+
         public async void OnBotaoVoltarClicked()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new Views.HomePage());
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
 
 
