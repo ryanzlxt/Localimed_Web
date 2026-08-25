@@ -1,126 +1,65 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Localimed.Views.LogPage"
-             Title=""
-             BackgroundColor="#001240"
-             Shell.NavBarIsVisible="False">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Localimed.Views.LogPage"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#001240">
 
-    <Grid ColumnDefinitions="*,2*">
-        <!--cria a divisao da tela-->
+    <Grid ColumnDefinitions="*,1.15*">
 
-        <!--lado esquerdo fica com a logo-->
-
-        <StackLayout Grid.Column="0"
-                     HorizontalOptions="Center"
-                     VerticalOptions="Center"
-                     Spacing="20">
-
-            <Image Source="logopng.png"
-                   WidthRequest="650" 
-                   HeightRequest="320" 
-                   Margin="0,0,0,0"/>
-
+        <VerticalStackLayout Grid.Column="0"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Spacing="12">
+            <Image Source="logopng.png" WidthRequest="360" HeightRequest="220" />
             <Label Text="LOCALIMED"
-               FontSize="50"
-               FontFamily="Montserrat"
-               HorizontalOptions="Center"
-               TextColor="White"
-                   Margin="0,0,0,0"/>
+                   FontSize="48"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
 
-        </StackLayout>
+        <Border Grid.Column="1"
+                WidthRequest="430"
+                HeightRequest="470"
+                BackgroundColor="#D9D9D9"
+                StrokeThickness="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="30" />
+            </Border.StrokeShape>
 
-        <!--lado direito com o loguin-->
-
-        <AbsoluteLayout Grid.Column="1">
-
-            <!-- cria uma caixa (BoxView) -->
-            <BoxView Color="LightGray"
-             WidthRequest="360"
-             HeightRequest="520"
-             AbsoluteLayout.LayoutBounds="0.74, 0.50, 400, 302"
-             AbsoluteLayout.LayoutFlags="PositionProportional" CornerRadius="30"/>
-
-            <!-- Conteúdo dentro do retângulo -->
-            <StackLayout AbsoluteLayout.LayoutBounds="0.72, 0.5, 320, 530"
-                 AbsoluteLayout.LayoutFlags="PositionProportional"
-                  Padding="20"
-                  Spacing="15">
-
-
+            <VerticalStackLayout Padding="35" Spacing="20"
+                                 VerticalOptions="Center">
                 <Label Text="Identifique-se no LocaliMED"
-               HorizontalOptions="Center"
-               Margin="0,22"        
-               FontSize="20"
-               FontAttributes="Bold"
-               TextColor="Black"/>
-
-                <!--<Entry Placeholder="ID funcinario:"
+                       FontSize="24"
+                       FontAttributes="Bold"
                        TextColor="Black"
-                       BackgroundColor="White"
-                       Margin="0,20,0,0"/>-->
+                       HorizontalTextAlignment="Center" />
 
-                <Entry x:Name="identificacaoUsuario"
-                       Placeholder="Insira o seu ID"
-                       BackgroundColor="White"
-                       TextColor="Black"
-                       Text="{Binding IdentificacaoUsuario}"
-                    />
+                <Entry
+                    Placeholder="Insira o seu ID"
+                    Text="{Binding IdentificacaoUsuario, Mode=TwoWay}"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    Keyboard="Numeric"
+                    HeightRequest="50" />
 
-                <Button Text="Continuar"
-                        Command="{Binding BotaoContinuar}"
-                        IsEnabled="{Binding BotaoAtivo}"
-                    />
-
-
-                <!--<Button
+                <Button
                     Text="Continuar"
-                    Clicked="ContinuarClicked"
-                    Padding="10"
+                    Command="{Binding BotaoContinuar}"
+                    BackgroundColor="#001240"
                     TextColor="White"
-                    BackgroundColor="DarkBlue"
-                    CornerRadius="20"
-                    Margin="0,13,0,0"/>-->     
-
-
-
-                <!-- Clicked nos permite Navegar para a primeira tela que nos redireciona
-                            para opções de inserir ou excluir medicamento-->
-
-
-                <!--<Label Text="Outras opções de identificação :"
-                       FontSize="17"
-                       TextColor="Black" Margin="0,30,20,0"/>
-
-
-                <Button Text="Entrar com CNS"
-                        TextColor="Black"
-                        BackgroundColor="Gray"
-                        CornerRadius="20"/>-->
-
-
-                <!--<Button Text="Seu certificado digital"
-                        TextColor="Black"
-                        BackgroundColor="Gray"
-                        CornerRadius="20"
-                        ImageSource="certificado.png"
-                        WidthRequest="280" 
-                        HeightRequest="30"
-                        FontSize="17"
-                        Clicked="CertificadoClicked"/>-->
+                    CornerRadius="24"
+                    HeightRequest="50" />
 
                 <Image Source="logo.png"
-               WidthRequest="100"
-               HeightRequest="100"
-               HorizontalOptions="Center" />
-
-
-            </StackLayout>
-
-        </AbsoluteLayout>
-
-
-
-
+                       WidthRequest="90"
+                       HeightRequest="90"
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+        </Border>
     </Grid>
 </ContentPage>

@@ -9,10 +9,17 @@ public partial class InserirMedicamentos : ContentPage
         InitializeComponent();
         BindingContext = new InserirMedicamentoViewModel();
 
-        tipoMedicamentoPicker.Items.Add("Asma");
-        tipoMedicamentoPicker.Items.Add("Diabetes");
-        tipoMedicamentoPicker.Items.Add("Hipertensão");
-        tipoMedicamentoPicker.Items.Add("Osteoporose");
-        tipoMedicamentoPicker.Items.Add("Glaucoma");
+        tipoMedicamentoPicker.ItemsSource = new[]
+        {
+            "Asma",
+            "Diabetes",
+            "Hipertensão",
+            "Osteoporose",
+            "Glaucoma",
+            "Dor",
+            "Neurológico",
+            "Depressão",
+            "Controlado"
+        };
     }
 }

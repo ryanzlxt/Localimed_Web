@@ -1,260 +1,125 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Localimed.Views.InserirMedicamentos"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#D8D8D8">
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Localimed.Views.InserirMedicamentos"
-             Shell.NavBarIsVisible="False"
-             BackgroundColor="#F0F0F0">
+    <Grid RowDefinitions="90,*">
 
-    <Grid RowDefinitions="60,*">
-
-        <!--
-
-                            =========================
-                                CABEÇALHO
-                            =========================
-
-        -->
-
-        <Border Grid.Row="0"
-                BackgroundColor="#001240"
-                StrokeThickness="0">
-
-            <Grid Padding="20,0">
-
-                <Label
-                    Text="LOCALIMED"
-                    TextColor="White"
-                    FontSize="22"
-                    FontAttributes="Bold"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Start"/>
-
-                <Frame
-                    WidthRequest="40"
-                    HeightRequest="40"
-                    CornerRadius="20"
-                    BackgroundColor="White"
-                    HasShadow="False"
-                    Padding="5"
-                    HorizontalOptions="End"
-                    VerticalOptions="Center">
-
-                    <Image
-                        Source="logopng.png"
-                        Aspect="AspectFit"/>
-
+        <Border Grid.Row="0" BackgroundColor="#001240" StrokeThickness="0">
+            <Grid Padding="25,0">
+                <Label Text="LOCALIMED" TextColor="White" FontSize="36"
+                       FontAttributes="Bold" VerticalOptions="Center" />
+                <Frame WidthRequest="65" HeightRequest="65" CornerRadius="33"
+                       BackgroundColor="White" Padding="5" HasShadow="False"
+                       HorizontalOptions="End" VerticalOptions="Center">
+                    <Image Source="logopng.png" Aspect="AspectFit" />
                 </Frame>
-
             </Grid>
-
         </Border>
 
-        <!--
-
-                            =========================
-                                CONTEÚDO
-                            =========================
-
-        -->
-
         <Grid Grid.Row="1">
-
-            <!--
-
-                            =========================
-                                CARD PRINCIPAL
-                            =========================
-
-            -->
-
-            <Border
-                WidthRequest="900"
-                HeightRequest="500"
-                BackgroundColor="#BDBDBD"
-                StrokeThickness="0"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
-
+            <Border WidthRequest="1000" HeightRequest="600"
+                    BackgroundColor="White" StrokeThickness="0"
+                    HorizontalOptions="Center" VerticalOptions="Center">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="6"/>
+                    <RoundRectangle CornerRadius="8" />
                 </Border.StrokeShape>
-
             </Border>
 
-            <VerticalStackLayout
-                Spacing="18"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
+            <VerticalStackLayout WidthRequest="700" Spacing="18"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center">
 
-                <!--
-
-                                =========================
-                                      TÍTULO
-                                =========================
-
-                -->
-
-
-
-                <Border
-                    BackgroundColor="#D9D9D9"
-                    Stroke="#9E9E9E"
-                    WidthRequest="400"
-                    Padding="10">
-
-                <Label
-                    Text="Inserção de Medicamentos"
-                    FontSize="24"
-                    TextColor="Black"
-                    FontAttributes="Bold"
-                    HorizontalOptions="Center"/>
-
+                <Border WidthRequest="450" Padding="8"
+                        BackgroundColor="#D9D9D9" Stroke="#9E9E9E"
+                        HorizontalOptions="Center">
+                    <Label Text="Inserção de Medicamentos"
+                           FontSize="26" FontAttributes="Bold"
+                           TextColor="Black" HorizontalTextAlignment="Center" />
                 </Border>
 
-                <BoxView
-                    HeightRequest="10"
-                    Opacity="0"/>
-
-                <!--
-
-                                =========================
-                                 NOME MEDICAMENTO
-                                =========================
-
-                -->
-
                 <Entry
-                    x:Name="nomeMedicamento"
+                    Text="{Binding NomeMedicamento, Mode=TwoWay}"
                     Placeholder="Nome Medicamento"
                     PlaceholderColor="Gray"
-                    HorizontalTextAlignment="Center"
-                    Text="{Binding NomeMedicamento, Mode=TwoWay}"
-                    WidthRequest="500"
-                    HeightRequest="45"
+                    TextColor="Black"
                     BackgroundColor="White"
-                    HorizontalOptions="Center"
-                    TextColor="Black"         
-                    CursorPosition="0"/>
+                    WidthRequest="560"
+                    HeightRequest="48"
+                    HorizontalOptions="Center" />
 
-                <!--
-
-                                =========================
-                                QUANTIDADE E LOTE
-                                =========================
-
-                -->
-
-                <Grid
-                    ColumnDefinitions="Auto,Auto"
-                    ColumnSpacing="18"
-                    HorizontalOptions="Center">
-
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="18" WidthRequest="560">
                     <Entry
-                        x:Name="quantidadeMedicamento"
                         Text="{Binding QuantidadeMedicamento, Mode=TwoWay}"
                         Keyboard="Numeric"
                         Placeholder="Quantidade"
                         PlaceholderColor="Gray"
                         TextColor="Black"
-                        WidthRequest="280"
-                        HeightRequest="45"
-                        BackgroundColor="White"/>
+                        BackgroundColor="White"
+                        MaxLength="9"
+                        HeightRequest="48" />
 
                     <Entry
-                        x:Name="numeroMedicamento"
+                        Grid.Column="1"
                         Text="{Binding NumeroLote, Mode=TwoWay}"
                         Keyboard="Numeric"
-                        TextColor="Black"
-                        PlaceholderColor="Gray"
-                        Grid.Column="1"
                         Placeholder="N° Lote"
-                        WidthRequest="280"
-                        HeightRequest="45"
-                        BackgroundColor="White"/>
-
+                        PlaceholderColor="Gray"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        MaxLength="9"
+                        HeightRequest="48" />
                 </Grid>
 
-                <!--
-
-                                =========================
-                                    TIPO E DATA
-                                =========================
-
-                -->
-
-                <Grid
-                    ColumnDefinitions="Auto,Auto"
-                    ColumnSpacing="18"
-                    HorizontalOptions="Center">
-
-
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="18" WidthRequest="560">
                     <Picker
-                    x:Name="tipoMedicamentoPicker"
-                    SelectedItem="{Binding TipoMedicamento, Mode=TwoWay}"
-                    Title="Tipo"
-                    TitleColor="#404040"
-                    TextColor="Black"
-                    WidthRequest="280"
-                    HeightRequest="60"
-                    BackgroundColor="White"/>
-
-
+                        x:Name="tipoMedicamentoPicker"
+                        SelectedItem="{Binding TipoMedicamento, Mode=TwoWay}"
+                        Title="Tipo"
+                        TitleColor="#404040"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        HeightRequest="48" />
 
                     <DatePicker
-                        x:Name="dataPostagemMedicamento"
                         Grid.Column="1"
                         Date="{Binding DataMedicamento, Mode=TwoWay}"
-                        WidthRequest="280"
-                        HeightRequest="45"
                         Format="dd/MM/yyyy"
                         TextColor="Black"
-                        BackgroundColor="White"/>
-
+                        BackgroundColor="White"
+                        HeightRequest="48" />
                 </Grid>
 
-                <BoxView
-                    HeightRequest="15"
-                    Opacity="0"/>
+                <Entry
+                    Text="{Binding DosagemMedicamento, Mode=TwoWay}"
+                    Keyboard="Numeric"
+                    Placeholder="Dosagem (opcional)"
+                    PlaceholderColor="Gray"
+                    TextColor="Black"
+                    BackgroundColor="White"
+                    WidthRequest="560"
+                    HeightRequest="48"
+                    HorizontalOptions="Center" />
 
-                <!--
+                <HorizontalStackLayout HorizontalOptions="End" Spacing="12" WidthRequest="560">
+                    <Button Text="VOLTAR"
+                            Command="{Binding BotaoVoltar}"
+                            WidthRequest="150" HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#808080"
+                            TextColor="White" />
 
-                                =========================
-                                      BOTÕES
-                                =========================
-
-                -->
-
-                <HorizontalStackLayout
-                    WidthRequest="500"
-                    HorizontalOptions="End"
-                    Spacing="10">
-
-                    <Button
-                        Text="VOLTAR"
-                        WidthRequest="150"
-                        HeightRequest="40"
-                        CornerRadius="20"
-                        BackgroundColor="#808080"
-                        TextColor="White"
-                        Command="{Binding BotaoVoltar}"/>
-
-                    <Button
-                        Text="CONFIRMAR"
-                        WidthRequest="180"
-                        HeightRequest="40"
-                        CornerRadius="20"
-                        BackgroundColor="#001240"
-                        TextColor="White"
-                        Command="{Binding BotaoConfirmar}"/>
-                    
-
+                    <Button Text="CONFIRMAR"
+                            Command="{Binding BotaoConfirmar}"
+                            WidthRequest="180" HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#001240"
+                            TextColor="White" />
                 </HorizontalStackLayout>
-
             </VerticalStackLayout>
-
         </Grid>
-
     </Grid>
-
 </ContentPage>

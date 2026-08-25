@@ -1,40 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Localimed.Views.HomePage"
-             Title="HomePage"
-             Shell.NavBarIsVisible="False"
-             BackgroundColor="#001240">
-
-    <!-- Passando a minha backgroundcolor -->
-    <!-- Escondendo a barra de navegação com ShellNavBarIsVisible-->
-
-    <!--
-
-                                ==============================
-                                        IMPORTANTÍSSIMO !
-                                ==============================
-
-        Para fazer a conexão entre as telas é necessário que tenha o BindingContext
-        inicializado lá na página HomePage.cs, através disso podemos ativar as conexões
-        que foram criadas em HomePageViewModel.cs
-
-    -->
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Localimed.Views.HomePage"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#001240">
 
     <Grid>
-
-        <!--
-
-                                ====================
-                                    FUNDO CINZA
-                                ====================
-
-            Container principal responsável por
-            exibir as ações do sistema.
-
-        -->
-
         <Border
             BackgroundColor="#BDBDBD"
             StrokeThickness="0"
@@ -45,97 +17,62 @@
             VerticalOptions="Center">
 
             <VerticalStackLayout
-                Padding="40"
-                Spacing="40"
+                Padding="80"
+                Spacing="25"
                 VerticalOptions="Center">
 
-                <!--
-
-                                        ================================
-                                            BOTÃO INSERIR MEDICAMENTOS
-                                        ================================
-
-                -->
+                <Label
+                    Text="LOCALIMED"
+                    TextColor="#001240"
+                    FontSize="42"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center" />
 
                 <Button
-                    BackgroundColor="GhostWhite"
-                    Command="{Binding BotaoInserirMedicamentos}"
-                    HeightRequest="90"
-                    CornerRadius="12"
                     Text="Inserir Medicamento"
+                    Command="{Binding BotaoInserirMedicamentos}"
+                    HeightRequest="75"
+                    CornerRadius="18"
+                    BackgroundColor="White"
                     TextColor="Black"
-                    FontSize="32"
+                    FontSize="26"
                     FontAttributes="Bold" />
 
-                <!--
-
-                                        ==================================
-                                            BOTÃO REMOVER MEDICAMENTOS
-                                        ==================================
-
-                -->
-
                 <Button
-                    BackgroundColor="GhostWhite"
-                    Command="{Binding BotaoRemoverMedicamento}"
-                    HeightRequest="90"
-                    CornerRadius="12"
                     Text="Remover Medicamento"
+                    Command="{Binding BotaoRemoverMedicamento}"
+                    HeightRequest="75"
+                    CornerRadius="18"
+                    BackgroundColor="White"
                     TextColor="Black"
-                    FontSize="32"
+                    FontSize="26"
                     FontAttributes="Bold" />
 
-                <!--
-
-                                        ==================================
-                                            BOTÃO VISUALIZAR ESTOQUE
-                                        ==================================
-
-                -->
-
                 <Button
-                    BackgroundColor="GhostWhite"
-                    Command="{Binding BotaoVisualizarEstoque}"
-                    HeightRequest="90"
-                    CornerRadius="12"
                     Text="Visualizar Estoque"
+                    Command="{Binding BotaoVisualizarEstoque}"
+                    HeightRequest="75"
+                    CornerRadius="18"
+                    BackgroundColor="White"
                     TextColor="Black"
-                    FontSize="32"
+                    FontSize="26"
                     FontAttributes="Bold" />
 
             </VerticalStackLayout>
-
         </Border>
 
-        <!--
-
-                                ====================
-                                        LOGO
-                                ====================
-
-            Ícone principal do sistema
-            posicionado sobre o container.
-
-        -->
-
         <Frame
-            WidthRequest="120"
-            HeightRequest="120"
-            CornerRadius="60"
+            WidthRequest="110"
+            HeightRequest="110"
+            CornerRadius="55"
             BackgroundColor="White"
             HasShadow="False"
-            Padding="10"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            TranslationX="470"
-            TranslationY="-290">
+            Padding="8"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            Margin="0,30,35,0">
 
-            <Image
-                Source="logopng.png"
-                Aspect="AspectFit"/>
-
+            <Image Source="logopng.png" Aspect="AspectFit" />
         </Frame>
-
     </Grid>
-
 </ContentPage>
